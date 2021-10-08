@@ -40,13 +40,13 @@ class GamePlay{
 			
 		}
 		map.printMap();
-		
+		// hier worden de schepen geplaatst op de kaart van de computer, bedoeling is 5 schepen maar 
 		for (int i = 0; i < 5; i++) {
 			boolean emptyLocation = false;
 			
 			while (!emptyLocation) {
-				rowCoor = (int)(Math.random()*9) + 2;
-				colCoor = (int)(Math.random()*10) + 1;
+				rowCoor = (int)(Math.random()*9) + 1;
+				colCoor = (int)(Math.random()*10) + 2;
 				if (computerMap.map[rowCoor][rowCoor] != '@') {
 					computerMap.map[rowCoor][colCoor] = '@';
 					emptyLocation = true;
